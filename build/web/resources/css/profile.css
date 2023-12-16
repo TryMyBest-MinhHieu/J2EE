@@ -1,0 +1,15 @@
+.profile-container{
+    margin-top: 80px;
+}
+
+margin-header{
+    margin-top: 80px;
+}
+.post-container{
+    background-color:#ffffff;
+    box-shadow: rgb(0 103 90 / 68%) 4px 4px 9px !important;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 40px;
+    padding:25px;
+}

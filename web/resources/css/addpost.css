@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.post-container {
+    padding: 20px; /* Khoảng cách xung quanh phần nhập caption và hình ảnh */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Làm tròn góc */
+    background-color: #ffffff;
+}
+
+
+
+.col-md-1 img{
+    margin-bottom: 10px;
+}
+
+.col-md-11 h4{
+    margin-left: -50px;
+}
+
+.btn:hover {
+    color: initial;
+    background-color: initial;
+    border-color: initial;
+}
+
+.img-fluid{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #1877f2; /* Màu nền tương tự Facebook */
+    border: none;
+    padding: 10px 20px;
+    color: #fff; /* Màu chữ trắng */
+    border-radius: 5px;
+}
+
+/* Định dạng nút khi di chuột vào */
+.btn-primary:hover {
+    background-color: #0e5a8a; /* Màu nền khi di chuột vào */
+}

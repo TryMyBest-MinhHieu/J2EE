@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+/*.quangcao{
+    margin: 40px 0 0 4px;
+    width: 18%;
+}
+.quangcao .post-container{
+    background-color: #adf4ff;
+    color: #969696;
+    height: 275px;
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow:rgb(0 96 107 / 79%) 3px 3px 2.6px;;
+}
+.quangcao .post-container p{
+    height: 10%;
+}
+.quangcao .post-container img{
+    height: 80%;
+    border-radius: 6px;
+}*/
+
+.backGround{
+    margin-top: 76px;
+    background-color: #ffffff;
+}
+.main-col{
+    border-left: 3px solid #ededed;
+    border-right:3px solid #ededed;
+    background-color: #ffffff;
+    width: 62%;
+}
+.post-content{
+    padding: 0;
+}
+.post-content .post-container{
+    border: none !important;
+    box-shadow: none !important;
+    padding-top: 0;
+}
+.postimage{
+
+    border-radius: 8px !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+.postcontainer{
+    width: 70% !important;
+    background-color:#ffffff;
+    box-shadow: rgb(0 103 90 / 68%) 4px 4px 9px !important;
+    border-radius: 30px;
+    border: none;
+    margin-bottom: 40px;
+    padding: 50px;
+}
+.pic{
+    margin-left: 20px !important;
+}
+.blueText{
+    color: #43aaff!important;
+}
+.Friend{
+    background-color: #ffffff;
+    border: 1px solid #adf4ff;
+    border-radius: 40px;
+    margin: 40px 10px 0 10px;
+    padding: 20px;
+    min-height: 600px;
+}
+.friend-element{
+    border-top: 1px solid #adf4ff;
+    border-bottom: 1px solid #adf4ff;
+}
+.Friend-header{
+    text-align: center;
+    font-size: 40px;
+}
+.search-resultstop .profile-pic {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search-resultstop a{
+    color: #000;
+    text-decoration: none;
+    font-style: none;
+}
+
+.navbar{
+    position: fixed;
+}
+
+.margin-header{
+    margin-top: 90px;
+}
+
+.username{
+    text-decoration: none;
+    color: black;
+}
+
+.like-comment-share a{
+    text-decoration: initial;
+    color: #43aaff;
+}
+
