@@ -13,8 +13,8 @@ public class ConnnectDatabase {
     public static Connection getConnection(){
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String conStr = "jdbc:sqlserver://localhost:1433;databaseName=db";
-            con = DriverManager.getConnection(conStr, "sa", "hieuhieudo");
+            String conStr = "jdbc:sqlserver://localhost:1433;databaseName=SocialNetwork";
+            con = DriverManager.getConnection(conStr, "sa", "Admin1234");
             return con;
         } catch (Exception ex) {
             Logger.getLogger(ConnnectDatabase.class.getName()).log(Level.SEVERE, null, ex);

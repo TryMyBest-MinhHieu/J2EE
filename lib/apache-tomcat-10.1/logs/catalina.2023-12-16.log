@@ -1,0 +1,94 @@
+16-Dec-2023 10:51:26.276 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.17
+16-Dec-2023 10:51:26.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 7 2023 23:31:38 UTC
+16-Dec-2023 10:51:26.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.17.0
+16-Dec-2023 10:51:26.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+16-Dec-2023 10:51:26.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.2.0-39-generic
+16-Dec-2023 10:51:26.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+16-Dec-2023 10:51:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+16-Dec-2023 10:51:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.21+9-post-Ubuntu-0ubuntu122.04
+16-Dec-2023 10:51:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+16-Dec-2023 10:51:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/nicoleon/Downloads/apache-tomcat-10.1.17
+16-Dec-2023 10:51:26.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/nicoleon/Downloads/apache-tomcat-10.1.17
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/nicoleon/Downloads/apache-tomcat-10.1.17/conf/logging.properties
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|nicoleon2708
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2023 10:51:26.306 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/nicoleon/Downloads/apache-tomcat-10.1.17
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/nicoleon/Downloads/apache-tomcat-10.1.17
+16-Dec-2023 10:51:26.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/nicoleon/Downloads/apache-tomcat-10.1.17/temp
+16-Dec-2023 10:51:26.314 SEVERE [main] org.apache.catalina.core.AprLifecycleListener.init An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+16-Dec-2023 10:51:26.692 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 10:51:26.736 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [723] milliseconds
+16-Dec-2023 10:51:26.814 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+16-Dec-2023 10:51:26.814 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.17]
+16-Dec-2023 10:51:26.830 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/ROOT]
+16-Dec-2023 10:51:27.226 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/ROOT] has finished in [396] ms
+16-Dec-2023 10:51:27.227 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/docs]
+16-Dec-2023 10:51:27.263 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/docs] has finished in [36] ms
+16-Dec-2023 10:51:27.264 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/host-manager]
+16-Dec-2023 10:51:27.313 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/host-manager] has finished in [49] ms
+16-Dec-2023 10:51:27.314 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/manager]
+16-Dec-2023 10:51:27.359 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/manager] has finished in [44] ms
+16-Dec-2023 10:51:27.359 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/examples]
+16-Dec-2023 10:51:27.618 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/Downloads/apache-tomcat-10.1.17/webapps/examples] has finished in [258] ms
+16-Dec-2023 10:51:27.623 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 10:51:27.637 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [900] milliseconds
+16-Dec-2023 10:57:25.251 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+16-Dec-2023 10:57:25.252 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 10:57:25.255 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+16-Dec-2023 10:57:25.281 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 10:57:25.291 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 11:36:31.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.17
+16-Dec-2023 11:36:31.746 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 7 2023 23:31:38 UTC
+16-Dec-2023 11:36:31.746 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.17.0
+16-Dec-2023 11:36:31.746 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+16-Dec-2023 11:36:31.746 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.2.0-39-generic
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11.0.21+9-post-Ubuntu-0ubuntu122.04
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1
+16-Dec-2023 11:36:31.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/conf/logging.properties
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|nicoleon2708
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+16-Dec-2023 11:36:31.759 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1
+16-Dec-2023 11:36:31.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/temp
+16-Dec-2023 11:36:31.764 SEVERE [main] org.apache.catalina.core.AprLifecycleListener.init An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+16-Dec-2023 11:36:32.068 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 11:36:32.097 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [559] milliseconds
+16-Dec-2023 11:36:32.150 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+16-Dec-2023 11:36:32.150 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.17]
+16-Dec-2023 11:36:32.165 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/ROOT]
+16-Dec-2023 11:36:32.436 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/ROOT] has finished in [271] ms
+16-Dec-2023 11:36:32.436 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/docs]
+16-Dec-2023 11:36:32.457 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/docs] has finished in [21] ms
+16-Dec-2023 11:36:32.457 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/host-manager]
+16-Dec-2023 11:36:32.486 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/host-manager] has finished in [29] ms
+16-Dec-2023 11:36:32.487 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/manager]
+16-Dec-2023 11:36:32.506 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/manager] has finished in [19] ms
+16-Dec-2023 11:36:32.507 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/examples]
+16-Dec-2023 11:36:32.691 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/nicoleon/SaiGonUni/J2EE/SocialWeb/J2EE/lib/apache-tomcat-10.1/webapps/examples] has finished in [183] ms
+16-Dec-2023 11:36:32.697 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 11:36:32.711 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [613] milliseconds
+16-Dec-2023 11:41:02.221 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+16-Dec-2023 11:41:02.221 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 11:41:02.223 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+16-Dec-2023 11:41:02.245 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+16-Dec-2023 11:41:02.258 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

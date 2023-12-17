@@ -9,24 +9,31 @@
     </head>
 
 <body>
-    <form class="container text-center" action="LoginServlet" method="post">
-        <div class="title">Social Network</div>
-        <div class="row justify-content-center">
-            <div class="col-12"><input type="email" id="email" name="email" class="form-control" placeholder="Email address"><small id="email-error" class="text-danger"></small></div>
+    <div class="login-container">
+        <div class="login-form-wrap">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <img src="./resources/img/letter-s.png" alt="web-logo"/>
+            </div>
+            <form class="login-form-style text-center" action="LoginServlet" method="post">
+                <div class="title">Social Network</div>
+                <div class="row justify-content-center">
+                    <div class="col-12"><input type="email" id="email" name="email" class="form-control" placeholder="Email address"><small id="email-error" class="text-danger"></small></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12"><input type="password" id="password" name="password" class="form-control" placeholder="Password"><small id="password-error" class="text-danger"></small></div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><h3>${message}</h3></div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><button type="submit" class="btn btn-primary mb-3 btn-login" >Login</button></div>            
+                </div>
+            </form>
+            <div class="row justify-content-center text-center">
+                <hr class="separator">
+                <div class="col-12"><label class="form-label-1">Don't have an account? <a href="signup.jsp">Sign up</a></label></div>
+            </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12"><input type="password" id="password" name="password" class="form-control" placeholder="Password"><small id="password-error" class="text-danger"></small></div>
-        </div>
-        <div class="row">
-            <div class="col-12"><h3>${message}</h3></div>
-        </div>
-        <div class="row">
-            <div class="col-12"><button type="submit" class="btn btn-primary mb-3 btn-login" >Login</button></div>            
-        </div>
-    </form>
-    <div class="row justify-content-center text-center">
-        <hr class="separator">
-        <div class="col-12"><label class="form-label-1">Don't have an account? <a href="signup.jsp">Sign up</a></label></div>
     </div>
     <script src="./validate/login.js"></script>
 </body>
