@@ -29,8 +29,7 @@ public class AdvertisementController {
                 int id = rs.getInt("Id");
                 String image = rs.getNString("Image");
                 String dis = rs.getNString("Discription");
-                int sponsorID = rs.getInt("SponsorID");
-                Advertisement ad = new Advertisement(id, image, dis, sponsorID);
+                Advertisement ad = new Advertisement(id, image, dis);
                 list.add(ad);
             }
             return list;

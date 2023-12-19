@@ -1,3 +1,4 @@
+<%@page import="controller.MessageController"%>
 <%@page import="controller.AccountController"%>
 <%@page import="model.Friend"%>
 <%@page import="java.util.List"%>
@@ -27,9 +28,10 @@
             AccountController accCtrl = new AccountController();
             FriendController friendCtrl = new FriendController();
             List<Account> list = accCtrl.searchAcc(searchValue);
+            MessageController msgController = new MessageController();
             out.println("<div class=\"container friend-container margin-header\">");
             if (list.isEmpty()) {
-                out.print("<h1 class=\"container\">Your friend list is empty</h1>");
+                out.print("<h1 class=\"container\">No result</h1>");
             } else {
                 for (Account account : list) {
                     int friendID = account.getAccID();
@@ -49,9 +51,12 @@
                     out.println("<div class=\"col-md-2\">");
                     if (friendCtrl.isFriend(acc.getAccID(), friendID)) {
                         out.println("<button id=\"follow-btn-"+friendID+"\" class=\"btn btn-outline-success btn-search\" onclick=\"beFriend(" + acc.getAccID() + "," + friendID + ")\">Unfriend</button>");
+                    } else if(msgController.isMess(acc.getAccID(), friendID)) {
+                        out.println("<button id=\"follow-btn-"+friendID+"\" class=\"btn btn-outline-success btn-search\" onclick=\"beFriend(" + acc.getAccID() + "," + friendID + ")\">Waiting</button>");
                     } else {
                         out.println("<button id=\"follow-btn-"+friendID+"\" class=\"btn btn-outline-success btn-search\" onclick=\"beFriend(" + acc.getAccID() + "," + friendID + ")\">Friend</button>");
                     }
+            
                     out.println("</div>");
                     out.println("</div>");
                     out.println("</div>");
@@ -71,10 +76,10 @@
                 if (buttonText === "Friend") {
                     $.ajax({
                         type: "POST",
-                        url: "AddFriendServlet",
+                        url: "AddMessageServlet",
                         data: {accID: accID, friendID: friendID},
                         success: function (data) {
-                            button.textContent = "Unfriend";
+                            button.textContent = "Waiting";
                         }
                     });
                 } else if(buttonText === "Unfriend"){
@@ -84,6 +89,15 @@
                         data: {accID: accID, friendID: friendID},
                         success: function (data) {
 
+                            button.textContent = "Friend";
+                        }
+                    });
+                } else if(buttonText === "Waiting"){
+                    $.ajax({
+                        type: "POST",
+                        url: "RemoveMessageServlet",
+                        data: {accID: accID, friendID: friendID},
+                        success: function (data) {
                             button.textContent = "Friend";
                         }
                     });

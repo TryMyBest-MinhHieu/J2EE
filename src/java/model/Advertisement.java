@@ -12,16 +12,14 @@ public class Advertisement {
     private int id;
     private String image;
     private String discription;
-    private int sponsorId;
 
     public Advertisement() {
     }
 
-    public Advertisement(int id, String image, String discription, int sponsorId) {
+    public Advertisement(int id, String image, String discription) {
         this.id = id;
         this.image = image;
         this.discription = discription;
-        this.sponsorId = sponsorId;
     }
 
     public int getId() {
@@ -46,14 +44,6 @@ public class Advertisement {
 
     public void setDiscription(String discription) {
         this.discription = discription;
-    }
-
-    public int getSponsorId() {
-        return sponsorId;
-    }
-
-    public void setSponsorId(int sponsorId) {
-        this.sponsorId = sponsorId;
     }
     
 }

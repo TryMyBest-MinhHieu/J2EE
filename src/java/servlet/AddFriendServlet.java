@@ -6,6 +6,7 @@ package servlet;
 
 import com.google.gson.Gson;
 import controller.FriendController;
+import controller.MessageController;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -21,16 +22,24 @@ public class AddFriendServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int accID = Integer.parseInt(req.getParameter("accID"));
-        int friendID = Integer.parseInt(req.getParameter("friendID"));
+        resp.setContentType("text/html;charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
+        int accID = Integer.parseInt(req.getParameter("id_acc"));
+        int friendID = Integer.parseInt(req.getParameter("id_friend"));
+        int msID = Integer.parseInt(req.getParameter("id"));
         FriendController friendCtrl = new FriendController();
-        Gson gson = new Gson();
-        boolean result = friendCtrl.addFriend(accID, friendID);
+        MessageController msgCtrl = new MessageController();
+        if (!friendCtrl.isFriend(accID, friendID)) {
+            boolean result = friendCtrl.addFriend(accID, friendID);
+            boolean rs = friendCtrl.addFriend(friendID, accID);
+            boolean remove = msgCtrl.deleteMess(msID);
+            if (result && remove) {
+                req.getRequestDispatcher("/message.jsp").forward(req, resp);
+            } else {
 
-        resp.setContentType("application/json");
-        resp.setCharacterEncoding("UTF-8");
-        PrintWriter out = resp.getWriter();
-        out.print(gson.toJson(result));
+            }
+        }
+
     }
 
 }

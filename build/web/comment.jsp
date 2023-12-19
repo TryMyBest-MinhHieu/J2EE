@@ -61,8 +61,9 @@
                     %>
                 </div>
             </div>
-            <form class="input-group mb-3" method="post" action="CommentServlet">
-                <input type="text" class="form-control" name="cmtcontent" placeholder="Write a comment">
+            <form class="commentform input-group mb-3" method="post" action="CommentServlet">
+                <input id="caption" type="text" class="form-control" name="cmtcontent" placeholder="Write a comment">
+                <small class="text-danger" id="caption-error"></small>
                 <button class="btn btn-primary" type="submit"><i class="ti-marker-alt">submit</i></button>
             </form>
             <!-- Comment Section -->
@@ -82,6 +83,7 @@
                                 out.print("<span class=\"fw-bold\">"+accCmt.getUsername()+"</span>");
                                 out.print("<div class=\"media-body\">");
                                 out.print("<p>" + cmt.getContent() + "</p>");
+                                out.print("<p>" + cmt.getDate_time() + "</p>");
                                 out.print("</div>");
                                 out.print("</div>");
                             }
@@ -91,5 +93,6 @@
                 </div>
             </div>
         </div>
+     <script src="./validate/validateComment.js"></script>
     </body>
 </html>

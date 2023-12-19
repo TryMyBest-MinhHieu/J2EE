@@ -8,7 +8,9 @@
 <%@page import="java.util.List"%>
 <%@page import="model.Post"%>
 <%@page import="model.Account"%>
+<%@page import="controller.LikePostController"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,9 +29,8 @@
             }
         %>
         <div class="row back-ground">
-            <div class="col-2 quangcao">             
-<!--                 <h4>Advetisement</h4>  -->              
-               <%
+            <div class="col-2 quangcao">                          
+                <%
                     AdvertisementController adCtrl = new AdvertisementController();
                     List<Advertisement> listAd = adCtrl.getAll();
                     for (Advertisement ad : listAd) {
@@ -41,12 +42,13 @@
 
                 %>   
             </div>
-            
+
             <%                out.println("<div class=\"col-8 main-col\">");
                 Account acc = (Account) session.getAttribute("account");
                 PostController postCtrl = new PostController();
                 AccountController accCtrl = new AccountController();
                 CommentController cmtCtrl = new CommentController();
+                LikePostController likeCtrl = new LikePostController();
                 List<Post> posts = postCtrl.getPosts(acc.getAccID());
                 List<Post> friendPosts = postCtrl.getPostsFriend(acc.getAccID());
                 if (posts.isEmpty()) {
@@ -78,14 +80,22 @@
                         }
                         out.println("</div>");
                         out.println("</div>");
+                        out.println("<div class=\"post-info\">");
+                        out.println("<p class=\"like-comment\" id=\"like-post-"+post.getPostID()+"\">"+likeCtrl.getNumberOfLike(post.getPostID())+" Like</p>");
                         out.println("<p class=\"post-content\">" + cmtCtrl.countCmt(post.getPostID()) + " Comment</p>");
+                        out.println("</div>");
                         out.println("</div>");
 
                         out.println("<div class=\"row\">");
                         out.println("<div class=\"col-md-12\">");
                         out.println("<div class=\"d-flex justify-content-between\">");
                         out.println("<div class=\"like-comment-share blueText\">");
-                        out.println("<i class=\"far ti-thumb-up\"></i> Like");
+                        //out.println("<i class=\"far ti-thumb-up\"></i> Like");
+                        if(likeCtrl.isLike(acc.getAccID(), post.getPostID())){
+                            out.println("<i id=\"like-post-btn-"+post.getPostID()+"\" onclick=\"likePost("+acc.getAccID()+","+post.getPostID()+")\"  >Unlike</i>");
+                        } else{
+                            out.println("<i id=\"like-post-btn-"+post.getPostID()+"\" onclick=\"likePost("+acc.getAccID()+","+post.getPostID()+")\"  >Like</i>");
+                        }
                         out.println("</div>");
                         out.println("<div class=\"like-comment-share\">");
                         out.println("<a class = \"text-comment\" href = \"comment.jsp?postID=" + post.getPostID() + "\">Comment</a>");
@@ -115,7 +125,6 @@
                     out.println("<h5 class=\"fw-bold\">" + account.getUsername() + "</h5>");
                     out.println("<small class=\"text-muted\">" + post.getDate() + "</small>");
                     out.println("</div>");
-
                     out.println("</div>");
 
                     out.println("<div class=\"row\">");
@@ -129,6 +138,7 @@
                     }
                     out.println("</div>");
                     out.println("</div>");
+                    out.println("<p class=\"like-comment\" id=\"like-post-"+post.getPostID()+"\">"+likeCtrl.getNumberOfLike(post.getPostID())+" Like</p>");
                     out.println("<p class=\"post-content\">" + cmtCtrl.countCmt(post.getPostID()) + " Comment</p>");
                     out.println("</div>");
 
@@ -136,7 +146,12 @@
                     out.println("<div class=\"col-md-12\">");
                     out.println("<div class=\"d-flex justify-content-between\">");
                     out.println("<div class=\"like-comment-share blueText\">");
-                    out.println("<i class=\"ti-thumb-up blueText\"></i> Like");
+                    //out.println("<i class=\"ti-thumb-up blueText\"></i> Like");
+                    if(likeCtrl.isLike(acc.getAccID(), post.getPostID())){
+                        out.println("<i id=\"like-post-btn-"+post.getPostID()+"\" onclick=\"likePost("+acc.getAccID()+","+post.getPostID()+")\" class=\"far ti-thumb-up\" >Unlike</i>");
+                    } else{
+                        out.println("<i id=\"like-post-btn-"+post.getPostID()+"\" onclick=\"likePost("+acc.getAccID()+","+post.getPostID()+")\" class=\"far ti-thumb-up\" >Like</i>");
+                    }
                     out.println("</div>");
                     out.println("<div class=\"like-comment-share\">");
                     out.println("<i class=\"far fa-comment-alt\"></i><a class = \"text-comment\" href = \"comment.jsp?postID=" + post.getPostID() + "\">Comment</a>");
@@ -156,7 +171,7 @@
                 out.println("<h4>Friend List</h4>");
 
                 FriendController friendCtrl = new FriendController();
-                List<Friend> list = friendCtrl.getFollowing(acc.getAccID());
+                List<Friend> list = friendCtrl.getFriend(acc.getAccID());
                 if (list.isEmpty()) {
                     out.print("<h1 class=\"container\">Your friend list is empty</h1>");
                 } else {
@@ -181,6 +196,8 @@
             %>
 
         </div>
+
+        <script src="./validate/like.js"></script>    
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 

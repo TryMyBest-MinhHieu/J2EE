@@ -36,11 +36,12 @@ public class CommentController {
     
     public boolean addCmt(Comment cmt){
         try {
-            String sql = "insert into Comment(CmtContent, PostID, AccID) values(?,?,?)";
+            String sql = "insert into Comment(CmtContent, PostID, AccID, DateTime) values(?,?,?,?)";
             PreparedStatement stm = con.prepareStatement(sql);
             stm.setNString(1, cmt.getContent());
             stm.setInt(2, cmt.getPostID());
             stm.setInt(3, cmt.getAccID());
+            stm.setNString(4, cmt.getDate_time());
             if(stm.executeUpdate() >0){
                 return true;
             }
@@ -60,7 +61,8 @@ public class CommentController {
                 int cmtID = rs.getInt("CmtID");
                 String cmtContent = rs.getNString("CmtContent");
                 int accID = rs.getInt("accID");
-                Comment cmt = new Comment(cmtID, cmtContent, postID, accID);
+                String datetime = rs.getString("DateTime");
+                Comment cmt = new Comment(cmtID, cmtContent, postID, accID, datetime);
                 cmts.add(cmt);
             }
             return cmts;

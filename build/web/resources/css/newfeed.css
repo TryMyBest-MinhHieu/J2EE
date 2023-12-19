@@ -9,25 +9,6 @@ body {
     margin-top: 100px;
 }
 
-/*.quangcao{
-    margin: 40px 0 0 4px;
-    width: 18%;
-}
-.quangcao .post-container{
-    background-color: #adf4ff;
-    color: #969696;
-    height: 275px;
-    padding: 4px;
-    border-radius: 10px;
-    box-shadow:rgb(0 96 107 / 79%) 3px 3px 2.6px;;
-}
-.quangcao .post-container p{
-    height: 10%;
-}
-.quangcao .post-container img{
-    height: 80%;
-    border-radius: 6px;
-}*/
 
 .backGround{
     margin-top: 76px;
@@ -67,6 +48,7 @@ body {
 }
 .blueText{
     color: #43aaff!important;
+    cursor: pointer ;
 }
 .Friend{
     background-color: #ffffff;
@@ -114,5 +96,14 @@ body {
 .like-comment-share a{
     text-decoration: initial;
     color: #43aaff;
+}
+
+.post-info {
+  display: flex;
+  align-items: center;
+}
+
+.like-comment {
+  margin-right: 440px;
 }
 

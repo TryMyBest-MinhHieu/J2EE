@@ -44,6 +44,22 @@
         <servlet-name>LogOutSevlet</servlet-name>
         <servlet-class>servlet.LogOutSevlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UnLikePostServlet</servlet-name>
+        <servlet-class>servlet.UnLikePostServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LikePostServlet</servlet-name>
+        <servlet-class>servlet.LikePostServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <servlet-class>servlet.AddMessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoveMessageServlet</servlet-name>
+        <servlet-class>servlet.RemoveMessageServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -87,6 +103,22 @@
     <servlet-mapping>
         <servlet-name>LogOutSevlet</servlet-name>
         <url-pattern>/LogOutSevlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LikePostServlet</servlet-name>
+        <url-pattern>/LikePostServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddMessageServlet</servlet-name>
+        <url-pattern>/AddMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveMessageServlet</servlet-name>
+        <url-pattern>/RemoveMessageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnLikePostServlet</servlet-name>
+        <url-pattern>/UnLikePostServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

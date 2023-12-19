@@ -13,3 +13,8 @@ margin-header{
     margin-bottom: 40px;
     padding:25px;
 }
+
+.blueText{
+    color: #43aaff!important;
+    cursor: pointer ;
+}

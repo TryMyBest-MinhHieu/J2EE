@@ -48,3 +48,31 @@ body {
 .col-md-8 h4{
     margin-left: -10px;
 }
+
+.button-container {
+    flex: 0 0 auto;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.search-result-mess{
+/*    background-color: #ffffff;*/
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 10px 40px 10px 50px;
+}
+
+.item-search-mess{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

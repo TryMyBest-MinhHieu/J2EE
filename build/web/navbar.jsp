@@ -38,6 +38,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="editprofile.jsp"><img src="./resources/img/settings.png"></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="message.jsp"><img src="./resources/img/add-user.png"></a>
+                            </li>
                         </ul>
                     </div>
 

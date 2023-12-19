@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controller;
 
 import database.ConnnectDatabase;
@@ -15,7 +12,8 @@ import model.Friend;
 public class FriendController {
 
     Connection con = ConnnectDatabase.getConnection();
-    public List<Friend> getFollowing(int accID){
+    
+    public List<Friend> getFriend(int accID){
         try {
             List<Friend> list = new ArrayList<>();
             String sql = "select * from Friend where AccID = "+accID;
@@ -23,24 +21,6 @@ public class FriendController {
             ResultSet rs = stm.executeQuery(sql);
             while(rs.next()){
                 int friendID = rs.getInt("FriendID");
-                Friend following = new Friend(accID, friendID);
-                list.add(following);
-            }
-            return list;
-        } catch (SQLException ex) {
-            Logger.getLogger(FriendController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
-    
-    public List<Friend> getFriend(int friendID){
-        try {
-            List<Friend> list = new ArrayList<>();
-            String sql = "select * from Friend where FriendID = "+friendID;
-            Statement stm = con.createStatement();
-            ResultSet rs = stm.executeQuery(sql);
-            while(rs.next()){
-                int accID = rs.getInt("AccID");
                 Friend friend = new Friend(accID, friendID);
                 list.add(friend);
             }

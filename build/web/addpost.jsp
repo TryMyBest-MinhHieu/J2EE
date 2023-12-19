@@ -39,7 +39,8 @@
                     <div class="post-container">
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">What are you thinking?</label>
-                            <textarea class="form-control" name="caption" rows="3" placeholder="Write some caption..."></textarea>
+                            <textarea id="caption" class="form-control" name="caption" rows="3" placeholder="Write some caption..."></textarea>
+                            <small class="text-danger" id="caption-error"></small>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Upload your image</label>
@@ -72,6 +73,7 @@
                 }
             });
         </script>
+        <script src="./validate/validateAddPost.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>

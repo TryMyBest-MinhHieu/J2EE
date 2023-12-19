@@ -1,3 +1,4 @@
+<%@page import="controller.LikePostController"%>
 <%@page import="controller.FriendController"%>
 <%@page import="model.Account"%>
 <%@page import="controller.AccountController"%>
@@ -31,10 +32,12 @@
 
         <%
             int accId = Integer.parseInt(request.getParameter("accID"));
+            Account account = (Account)session.getAttribute("account");
             PostController postCtrl = new PostController();
             AccountController accCtrl = new AccountController();
             CommentController cmtCtrl = new CommentController();
             FriendController friendCtrl = new FriendController();
+            LikePostController likeCtrl = new LikePostController();
             List<Post> posts = postCtrl.getPosts(accId);
             Account acc = accCtrl.getAccountByID(accId);
 
@@ -104,9 +107,7 @@
                                 out.println("<h5 class=\"fw-bold\">" + acc.getUsername() + "</h5>");
                                 out.println("<small class=\"text-muted\">" + post.getDate() + "</small>");
                                 out.println("</div>");
-
                                 out.println("</div>");
-
                                 out.println("<div class=\"row\">");
                                 out.println("<div class=\"col-md-12 post-content\">");
                                 out.println("<div class=\"p\">");
@@ -114,6 +115,7 @@
                                 out.println("<img src=\"./resources/img/" + post.getImage() + "\" alt=\"Posted Image\" class=\"img-fluid postimage\" width = \"100%\" height = \"100%\">");
                                 out.println("</div>");
                                 out.println("</div>");
+                                out.println("<p class=\"like-comment\" id=\"like-post-" + post.getPostID() + "\">" + likeCtrl.getNumberOfLike(post.getPostID()) + " Like</p>");
                                 out.println("<p class=\"post-content\">" + cmtCtrl.countCmt(post.getPostID()) + " Comment</p>");
                                 out.println("</div>");
 
@@ -121,9 +123,14 @@
                                 out.println("<div class=\"col-md-12\">");
                                 out.println("<div class=\"d-flex justify-content-between\">");
                                 out.println("<div class=\"like-comment-share blueText\">");
-                                out.println("<i class=\"far ti-thumb-up\"></i> Like");
+                                if (likeCtrl.isLike(account.getAccID(), post.getPostID())) {
+                                        out.println("<i id=\"like-post-btn-" + post.getPostID() + "\" onclick=\"likePost(" + acc.getAccID() + "," + post.getPostID() + ")\"  >Unlike</i>");
+                                    } else {
+                                        out.println("<i id=\"like-post-btn-" + post.getPostID() + "\" onclick=\"likePost(" + acc.getAccID() + "," + post.getPostID() + ")\"  >Like</i>");
+                                    }
+                                //out.println("<i class=\"far ti-thumb-up\"></i> Like");
                                 out.println("</div>");
-                                out.println("<div class=\"like-comment-share\">");
+                                out.println("<div class=\"like-comment-share\">");                           
                                 out.println("<a class = \"text-comment\" href = \"comment.jsp?postID=" + post.getPostID() + "\">Comment</a>");
                                 out.println("</div>");
                                 out.println("<div class=\"like-comment-share blueText\">");
@@ -147,7 +154,7 @@
 
             </div>
         </div>
-
+        <script src="./validate/like.js"></script>   
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
